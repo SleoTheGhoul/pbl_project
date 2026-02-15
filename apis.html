@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReconHub - APIs</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- LINK TO YOUR CENTRAL CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- ========== HEADER / NAVBAR ========== -->
+        <header class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>ReconHub</span>
+                <span class="logo-beta">BETA</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="query.html" class="nav-item"><i class="fas fa-search"></i> Query</a>
+                <a href="database.html" class="nav-item"><i class="fas fa-database"></i> Database</a>
+                <a href="apis.html" class="nav-item active"><i class="fas fa-code-branch"></i> APIs</a>
+            </nav>
+        </header>
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main class="api-content">
+            <h1 class="page-title">API Reference</h1>
+            <p class="page-subtitle">Comprehensive list of integrated reconnaissance and threat intelligence APIs</p>
+
+            <!-- Infrastructure Intelligence Card -->
+            <div class="main-card api-category-card">
+                <h2><i class="fas fa-network-wired"></i> Infrastructure Intelligence</h2>
+                <div class="api-grid">
+                    <!-- Shodan -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">Shodan</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Search engine for Internet-connected devices, port scanning, and vulnerability detection</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">IP lookup</span>
+                                <span class="tag">Port scan</span>
+                                <span class="tag">Service detection</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">1 req/sec</span>
+                        </div>
+                    </div>
+                    <!-- Censys -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">Censys</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Internet-wide scanning and asset discovery platform</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">Host search</span>
+                                <span class="tag">Certificate search</span>
+                                <span class="tag">Service enumeration</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">120 req/min</span>
+                        </div>
+                    </div>
+                    <!-- IPinfo -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">IPinfo</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">IP address geolocation, ASN, and company information</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">IP lookup</span>
+                                <span class="tag">ASN data</span>
+                                <span class="tag">Geolocation</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">50K req/month</span>
+                        </div>
+                    </div>
+                    <!-- SecurityTrails -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">SecurityTrails</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Historical DNS and WHOIS data, subdomain discovery</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">DNS history</span>
+                                <span class="tag">Subdomains</span>
+                                <span class="tag">WHOIS history</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">50 req/month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Threat Intelligence Card -->
+            <div class="main-card api-category-card">
+                <h2><i class="fas fa-fire-alt"></i> Threat Intelligence</h2>
+                <div class="api-grid">
+                    <!-- VirusTotal -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">VirusTotal</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Multi-engine malware scanner and URL/file reputation service</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">File scan</span>
+                                <span class="tag">URL analysis</span>
+                                <span class="tag">IP reputation</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">4 req/min</span>
+                        </div>
+                    </div>
+                    <!-- AbuseIPDB -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">AbuseIPDB</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">IP address abuse and reputation database</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">IP check</span>
+                                <span class="tag">Report submission</span>
+                                <span class="tag">Blacklist</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">1000 req/day</span>
+                        </div>
+                    </div>
+                    <!-- AlienVault OTX -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">AlienVault OTX</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Open Threat Exchange - collaborative threat intelligence</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">Indicators</span>
+                                <span class="tag">Pulses</span>
+                                <span class="tag">Threat data</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">10 req/sec</span>
+                        </div>
+                    </div>
+                    <!-- GreyNoise -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">GreyNoise</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Internet noise and benign scanner identification</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div classs="tags">
+                                <span class="tag">IP context</span>
+                                <span class="tag">RIOT check</span>
+                                <span class="tag">Classification</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">1000 req/day</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Domain & DNS Intelligence Card -->
+            <div class="main-card api-category-card">
+                <h2><i class="fas fa-globe-americas"></i> Domain & DNS Intelligence</h2>
+                <div class="api-grid">
+                    <!-- WHOIS -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">WHOIS</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Domain registration and ownership information</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">Domain lookup</span>
+                                <span class="tag">Registrant data</span>
+                                <span class="tag">Name servers</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">Unlimited</span>
+                        </div>
+                    </div>
+                    <!-- DNS Lookup -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">DNS Lookup</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">DNS record resolution and enumeration</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">A records</span>
+                                <span class="tag">MX records</span>
+                                <span class="tag">TXT records</span>
+                                <span class="tag">NS records</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">Unlimited</span>
+                        </div>
+                    </div>
+                    <!-- URLScan -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">URLScan</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Website scanner and screenshot service</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">URL scan</span>
+                                <span class="tag">Screenshot</span>
+                                <span class="tag">DOM analysis</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">100 req/hour</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OSINT & Email Card -->
+            <div class="main-card api-category-card">
+                <h2><i class="fas fa-user-secret"></i> OSINT & Email</h2>
+                <div class="api-grid">
+                    <!-- Hunter.io -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">Hunter.io</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Email discovery and verification service</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">Email finder</span>
+                                <span class="tag">Domain search</span>
+                                <span class="tag">Verification</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">50 req/month</span>
+                        </div>
+                    </div>
+                    <!-- HaveIBeenPwned -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">HaveIBeenPwned</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Data breach notification and password checking</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">Breach check</span>
+                                <span class="tag">Password check</span>
+                                <span class="tag">Paste search</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">1 req/1.5sec</span>
+                        </div>
+                    </div>
+                    <!-- Gmail API -->
+                    <div class="api-card">
+                        <div class="api-card-header">
+                            <span class="api-card-title">Gmail API</span>
+                            <div class="status-dot"></div>
+                        </div>
+                        <p class="api-desc">Email metadata extraction via OAuth 2.0</p>
+                        <div class="api-endpoints">
+                            <div class="api-endpoints-label">Endpoints:</div>
+                            <div class="tags">
+                                <span class="tag">Message list</span>
+                                <span class="tag">Headers</span>
+                                <span class="tag">Attachments</span>
+                            </div>
+                        </div>
+                        <div class="api-rate-limit">
+                            <span class="api-rate-limit-label">Rate Limit:</span>
+                            <span class="rate-tag">1B req/day</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Stats Grid -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(33, 150, 243, 0.1); color: #2196F3;">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">16</span>
+                        <span class="card-label">Total APIs</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(156, 39, 176, 0.1); color: #9C27B0;">
+                            <i class="fas fa-th-list"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">4</span>
+                        <span class="card-label">Categories</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(76, 175, 80, 0.1); color: #4CAF50;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">100%</span>
+                        <span class="card-label">Active</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(255, 152, 0, 0.1); color: #FF9800;">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">99.9%</span>
+                        <span class_name="card-label">Uptime</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- LINK TO YOUR CENTRAL JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+</body>
+</html>
+

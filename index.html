@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReconHub - Dashboard</title>
+    
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Library (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- LINK TO YOUR CENTRAL CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- ========== HEADER / NAVBAR ========== -->
+        <header class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>ReconHub</span>
+                <span class="logo-beta">BETA</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item active"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="query.html" class="nav-item"><i class="fas fa-search"></i> Query</a>
+                <a href="database.html" class="nav-item"><i class="fas fa-database"></i> Database</a>
+                <a href="apis.html" class="nav-item"><i class="fas fa-code-branch"></i> APIs</a>
+            </nav>
+        </header>
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main class="dashboard-content">
+            <h1 class="page-title">Reconnaissance Dashboard</h1>
+            <p class="page-subtitle">Unified threat intelligence and API reconnaissance platform</p>
+
+            <!-- ========== STATS GRID ========== -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(76, 175, 80, 0.1); color: #4CAF50;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span class="card-percentage" style="color: #4CAF50;">+12%</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">1,247</span>
+                        <span class="card-label">Total Queries</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(33, 150, 243, 0.1); color: #2196F3;">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <span class="card-percentage" style="color: #2196F3;"></span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">16</span>
+                        <span class="card-label">Active APIs</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(244, 67, 54, 0.1); color: #F44336;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <span class="card-percentage" style="color: #F44336;">+3 today</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">23</span>
+                        <span class="card-label">Threats Detected</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper" style="background-color: rgba(255, 152, 0, 0.1); color: #FF9800;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <span class="card-percentage" style="color: #FF9800;">+450</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-value">5.2K</span>
+                        <span class="card-label">Database Records</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== BOTTOM SECTIONS ========== -->
+            <section class="bottom-sections">
+                
+                <!-- Recent Queries -->
+                <div class="main-card">
+                    <h2>Recent Queries</h2>
+                    <div class="query-item">
+                        <div class="query-info">
+                            <span class="type-tag">IP</span>
+                            <span class="query-target">192.168.1.1</span>
+                        </div>
+                        <div class="query-status">
+                            <span class="tag tag-low"><i class="fas fa-shield-alt"></i> Low Risk</span>
+                            <span class="query-time">2m ago</span>
+                        </div>
+                    </div>
+                    <div class="query-item">
+                        <div class="query-info">
+                            <span class="type-tag">Domain</span>
+                            <span class="query-target">suspicious-site.com</span>
+                        </div>
+                        <div class="query-status">
+                            <span class="tag tag-high"><i class="fas fa-exclamation-triangle"></i> High Risk</span>
+                            <span class="query-time">5m ago</span>
+                        </div>
+                    </div>
+                    <div class="query-item">
+                        <div class="query-info">
+                            <span class="type-tag">Email</span>
+                            <span class="query-target">test@example.com</span>
+                        </div>
+                        <div class="query-status">
+                            <span class="tag tag-safe"><i class="fas fa-check-circle"></i> Safe</span>
+                            <span class="query-time">12m ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="main-card">
+                    <h2>Quick Actions</h2>
+                    <a href="query.html" class="action-item">
+                        <i class="fas fa-search"></i>
+                        <span>New Query</span>
+                    </a>
+                    <a href="database.html" class="action-item">
+                        <i class="fas fa-database"></i>
+                        <span>View Database</span>
+                    </a>
+                    <a href="apis.html" class="action-item">
+                        <i class="fas fa-plug"></i>
+                        <span>API Status</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- API Integration Status -->
+            <section class="main-card api-status-card">
+                <h2>API Integration Status</h2>
+                <!-- This grid will be filled by script.js -->
+                <div class="api-status-grid" id="api-status-grid">
+                    <!-- Example of one item, JS will create the rest -->
+                    <div class="api-status-item">
+                        <div class="api-info">
+                            <span class="api-name">Shodan</span>
+                            <span class="api-status-text">Checking...</span>
+                        </div>
+                        <div class="status-dot checking"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- LINK TO YOUR CENTRAL JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+</body>
+</html>
+
