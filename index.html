@@ -32,6 +32,7 @@
                 <a href="query.html" class="nav-item"><i class="fas fa-search"></i> Query</a>
                 <a href="database.html" class="nav-item"><i class="fas fa-database"></i> Database</a>
                 <a href="apis.html" class="nav-item"><i class="fas fa-code-branch"></i> APIs</a>
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
             </nav>
         </header>
 
@@ -47,10 +48,9 @@
                         <div class="card-icon-wrapper" style="background-color: rgba(76, 175, 80, 0.1); color: #4CAF50;">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <span class="card-percentage" style="color: #4CAF50;">+12%</span>
                     </div>
                     <div class="card-body">
-                        <span class="card-value">1,247</span>
+                        <span class="card-value" id="stat-total-queries">—</span>
                         <span class="card-label">Total Queries</span>
                     </div>
                 </div>
@@ -59,10 +59,9 @@
                         <div class="card-icon-wrapper" style="background-color: rgba(33, 150, 243, 0.1); color: #2196F3;">
                             <i class="fas fa-plug"></i>
                         </div>
-                        <span class="card-percentage" style="color: #2196F3;"></span>
                     </div>
                     <div class="card-body">
-                        <span class="card-value">16</span>
+                        <span class="card-value" id="stat-active-apis">—</span>
                         <span class="card-label">Active APIs</span>
                     </div>
                 </div>
@@ -71,10 +70,9 @@
                         <div class="card-icon-wrapper" style="background-color: rgba(244, 67, 54, 0.1); color: #F44336;">
                             <i class="fas fa-exclamation-triangle"></i>
                         </div>
-                        <span class="card-percentage" style="color: #F44336;">+3 today</span>
                     </div>
                     <div class="card-body">
-                        <span class="card-value">23</span>
+                        <span class="card-value" id="stat-threats">—</span>
                         <span class="card-label">Threats Detected</span>
                     </div>
                 </div>
@@ -83,10 +81,9 @@
                         <div class="card-icon-wrapper" style="background-color: rgba(255, 152, 0, 0.1); color: #FF9800;">
                             <i class="fas fa-book"></i>
                         </div>
-                        <span class="card-percentage" style="color: #FF9800;">+450</span>
                     </div>
                     <div class="card-body">
-                        <span class="card-value">5.2K</span>
+                        <span class="card-value" id="stat-db-records">—</span>
                         <span class="card-label">Database Records</span>
                     </div>
                 </div>
@@ -98,35 +95,8 @@
                 <!-- Recent Queries -->
                 <div class="main-card">
                     <h2>Recent Queries</h2>
-                    <div class="query-item">
-                        <div class="query-info">
-                            <span class="type-tag">IP</span>
-                            <span class="query-target">192.168.1.1</span>
-                        </div>
-                        <div class="query-status">
-                            <span class="tag tag-low"><i class="fas fa-shield-alt"></i> Low Risk</span>
-                            <span class="query-time">2m ago</span>
-                        </div>
-                    </div>
-                    <div class="query-item">
-                        <div class="query-info">
-                            <span class="type-tag">Domain</span>
-                            <span class="query-target">suspicious-site.com</span>
-                        </div>
-                        <div class="query-status">
-                            <span class="tag tag-high"><i class="fas fa-exclamation-triangle"></i> High Risk</span>
-                            <span class="query-time">5m ago</span>
-                        </div>
-                    </div>
-                    <div class="query-item">
-                        <div class="query-info">
-                            <span class="type-tag">Email</span>
-                            <span class="query-target">test@example.com</span>
-                        </div>
-                        <div class="query-status">
-                            <span class="tag tag-safe"><i class="fas fa-check-circle"></i> Safe</span>
-                            <span class="query-time">12m ago</span>
-                        </div>
+                    <div id="recent-queries-list">
+                        <div class="loading-indicator"><i class="fas fa-spinner fa-spin"></i> Loading recent queries...</div>
                     </div>
                 </div>
                 
@@ -145,29 +115,24 @@
                         <i class="fas fa-plug"></i>
                         <span>API Status</span>
                     </a>
+                    <a href="settings.html" class="action-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
                 </div>
             </section>
 
             <!-- API Integration Status -->
             <section class="main-card api-status-card">
                 <h2>API Integration Status</h2>
-                <!-- This grid will be filled by script.js -->
                 <div class="api-status-grid" id="api-status-grid">
-                    <!-- Example of one item, JS will create the rest -->
-                    <div class="api-status-item">
-                        <div class="api-info">
-                            <span class="api-name">Shodan</span>
-                            <span class="api-status-text">Checking...</span>
-                        </div>
-                        <div class="status-dot checking"></div>
-                    </div>
+                    <div class="loading-indicator"><i class="fas fa-spinner fa-spin"></i> Checking API status...</div>
                 </div>
             </section>
         </main>
     </div>
 
     <!-- LINK TO YOUR CENTRAL JAVASCRIPT FILE -->
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
-

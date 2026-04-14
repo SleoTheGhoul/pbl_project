@@ -1,14 +1,16 @@
 {
   "name": "reconhub",
-  "version": "1.0.0",
-  "description": "Fully functional ReconHub backend (no database, in-memory only)",
+  "version": "2.0.0",
+  "description": "ReconHub - Unified Reconnaissance & Threat Intelligence Platform with real API integrations",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node test-apis.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.7.0"
   }
 }

@@ -29,6 +29,7 @@
                 <a href="query.html" class="nav-item active"><i class="fas fa-search"></i> Query</a>
                 <a href="database.html" class="nav-item"><i class="fas fa-database"></i> Database</a>
                 <a href="apis.html" class="nav-item"><i class="fas fa-code-branch"></i> APIs</a>
+                <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Settings</a>
             </nav>
         </header>
 
@@ -50,14 +51,14 @@
                     </nav>
 
                     <div class="input-area">
-                        <input type="text" id="query-input" placeholder="e.g., 192.168.1.1 or 8.8.8.8">
+                        <input type="text" id="query-input" placeholder="e.g., 8.8.8.8 or 1.1.1.1">
                         <button id="query-button">
                             <i class="fas fa-paper-plane"></i>
                             <span id="query-button-text">Query IP</span>
                         </button>
                     </div>
 
-                    <p class="input-helper">Query IP reputation, geolocation, ASN, and open ports via Shodan, IPinfo, and AbuseIPDB</p>
+                    <p class="input-helper">Query IP reputation, geolocation, ASN, and open ports via IPinfo, AbuseIPDB, Shodan, ip-api, and VirusTotal</p>
                 </div>
 
                 <!-- Right Column: Active Data Sources -->
@@ -67,44 +68,26 @@
                     <div class="source-item">
                         <div class="status-dot active"></div>
                         <div class="source-info">
-                            <div class="source-title">Shodan</div>
-                            <div class="source-desc">IP/Port Scanning</div>
-                        </div>
-                        <div class="source-tags"><span class="tag tag-blue">Infrastructure</span></div>
-                    </div>
-                    
-                    <div class="source-item">
-                        <div class="status-dot active"></div>
-                        <div class="source-info">
-                            <div class="source-title">VirusTotal</div>
-                            <div class="source-desc">File/URL Analysis</div>
-                        </div>
-                        <div class="source-tags"><span class="tag tag-red">Threat Intel</span></div>
-                    </div>
-
-                    <div class="source-item">
-                        <div class="status-dot active"></div>
-                        <div class="source-info">
                             <div class="source-title">IPinfo</div>
                             <div class="source-desc">IP Geolocation</div>
                         </div>
                         <div class="source-tags"><span class="tag tag-blue">Infrastructure</span></div>
                     </div>
-                    
-                    <div class="source-item">
-                        <div class="status-dot active"></div>
-                        <div class="source-info">
-                            <div class="source-title">AbuseIPDB</div>
-                            <div class="source-desc">IP Reputation</div>
-                        </div>
-                        <div class="source-tags"><span class="tag tag-red">Threat Intel</span></div>
-                    </div>
 
                     <div class="source-item">
                         <div class="status-dot active"></div>
                         <div class="source-info">
-                            <div class="source-title">SecurityTrails</div>
-                            <div class="source-desc">Historical DNS</div>
+                            <div class="source-title">AbuseIPDB</div>
+                            <div class="source-desc">IP Threat Intelligence</div>
+                        </div>
+                        <div class="source-tags"><span class="tag tag-red">Threat Intel</span></div>
+                    </div>
+                    
+                    <div class="source-item">
+                        <div class="status-dot active"></div>
+                        <div class="source-info">
+                            <div class="source-title">Shodan</div>
+                            <div class="source-desc">Device & Network Info</div>
                         </div>
                         <div class="source-tags"><span class="tag tag-blue">Infrastructure</span></div>
                     </div>
@@ -112,18 +95,56 @@
                     <div class="source-item">
                         <div class="status-dot active"></div>
                         <div class="source-info">
-                            <div class="source-title">Hunter.io</div>
-                            <div class="source-desc">Email Discovery</div>
+                            <div class="source-title">VirusTotal</div>
+                            <div class="source-desc">Malware & Phishing Detection</div>
+                        </div>
+                        <div class="source-tags"><span class="tag tag-red">Threat Intel</span></div>
+                    </div>
+
+                    <div class="source-item">
+                        <div class="status-dot active"></div>
+                        <div class="source-info">
+                            <div class="source-title">ip-api</div>
+                            <div class="source-desc">Geolocation & ISP</div>
+                        </div>
+                        <div class="source-tags"><span class="tag tag-blue">Infrastructure</span></div>
+                    </div>
+
+                    <div class="source-item">
+                        <div class="status-dot active"></div>
+                        <div class="source-info">
+                            <div class="source-title">WHOIS XML</div>
+                            <div class="source-desc">Domain Registration</div>
+                        </div>
+                        <div class="source-tags"><span class="tag tag-blue">Infrastructure</span></div>
+                    </div>
+
+                    <div class="source-item">
+                        <div class="status-dot active"></div>
+                        <div class="source-info">
+                            <div class="source-title">crt.sh</div>
+                            <div class="source-desc">Subdomain Enumeration</div>
+                        </div>
+                        <div class="source-tags"><span class="tag tag-osint">OSINT</span></div>
+                    </div>
+
+                    <div class="source-item">
+                        <div class="status-dot active"></div>
+                        <div class="source-info">
+                            <div class="source-title">Abstract API</div>
+                            <div class="source-desc">Email Validation</div>
                         </div>
                         <div class="source-tags"><span class="tag tag-osint">OSINT</span></div>
                     </div>
                 </div>
             </div>
+
+            <!-- Results Panel -->
+            <div class="main-card" id="results-panel" style="display:none;"></div>
         </main>
     </div>
 
     <!-- LINK TO YOUR CENTRAL JAVASCRIPT FILE -->
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
-

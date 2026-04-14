@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReconHub - Settings</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="navbar">
+            <a href="index.html" class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>ReconHub</span>
+                <span class="logo-beta">BETA</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-item"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="query.html" class="nav-item"><i class="fas fa-search"></i> Query</a>
+                <a href="database.html" class="nav-item"><i class="fas fa-database"></i> Database</a>
+                <a href="apis.html" class="nav-item"><i class="fas fa-code-branch"></i> APIs</a>
+                <a href="settings.html" class="nav-item active"><i class="fas fa-cog"></i> Settings</a>
+            </nav>
+        </header>
+
+        <main class="settings-content">
+            <h1 class="page-title">Settings</h1>
+            <p class="page-subtitle">Manage your API keys and preferences. Keys are stored server-side and never exposed to the browser.</p>
+
+            <form id="settings-form" class="main-card">
+                <h2><i class="fas fa-key"></i> API Keys</h2>
+                <p class="settings-info">Enter your own API keys below to override the defaults. Leave blank to use the built-in keys.</p>
+
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label for="key-abstractApi"><i class="fas fa-envelope"></i> Abstract API</label>
+                        <input type="text" id="key-abstractApi" data-key="abstractApi" placeholder="Loading...">
+                        <span class="setting-desc">Email validation</span>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="key-ipinfo"><i class="fas fa-map-marker-alt"></i> IPinfo</label>
+                        <input type="text" id="key-ipinfo" data-key="ipinfo" placeholder="Loading...">
+                        <span class="setting-desc">IP geolocation</span>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="key-abuseipdb"><i class="fas fa-shield-alt"></i> AbuseIPDB</label>
+                        <input type="text" id="key-abuseipdb" data-key="abuseipdb" placeholder="Loading...">
+                        <span class="setting-desc">IP threat intelligence</span>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="key-whoisxml"><i class="fas fa-id-card"></i> WHOIS XML API</label>
+                        <input type="text" id="key-whoisxml" data-key="whoisxml" placeholder="Loading...">
+                        <span class="setting-desc">Domain registration info</span>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="key-shodan"><i class="fas fa-server"></i> Shodan</label>
+                        <input type="text" id="key-shodan" data-key="shodan" placeholder="Loading...">
+                        <span class="setting-desc">Device & network scanning</span>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="key-virustotal"><i class="fas fa-virus"></i> VirusTotal</label>
+                        <input type="text" id="key-virustotal" data-key="virustotal" placeholder="Loading...">
+                        <span class="setting-desc">Malware & phishing detection</span>
+                    </div>
+
+
+                </div>
+
+                <div class="settings-actions">
+                    <button type="submit" class="save-btn"><i class="fas fa-save"></i> Save Settings</button>
+                    <span id="settings-status" class="status-msg"></span>
+                </div>
+            </form>
+
+            <div class="main-card">
+                <h2><i class="fas fa-info-circle"></i> API Keys Info</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">ip-api</span>
+                        <span class="info-value">No API key required — free service</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">crt.sh</span>
+                        <span class="info-value">No API key required — free Certificate Transparency search</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">HIBP Passwords</span>
+                        <span class="info-value">No API key required — free password breach check</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
